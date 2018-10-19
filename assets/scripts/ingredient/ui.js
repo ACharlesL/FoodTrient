@@ -17,6 +17,10 @@ const getIngredientsSuccess = (data) => {
   $('.content').html(showIngredientsHtml)
 }
 
+const updateIngredientsSuccess = function (response) {
+  $('#display-message').html('content updated')
+  $('#display-message').css('color', 'green')
+}
 // const clearBooks = () => {
 //   $('.content').empty()
 // }
@@ -28,5 +32,6 @@ const failure = (error) => {
 module.exports = {
   ingredientCreateSuccess,
   getIngredientsSuccess,
-  failure
+  failure,
+  updateIngredientsSuccess
 }

@@ -3,6 +3,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const store = require('../store.js')
 
 const onCreateIngredient = (event) => {
   event.preventDefault()
@@ -21,19 +22,19 @@ const onCreateIngredient = (event) => {
 }
 
 const onUpdateIngredient = (event) => {
+  console.log('in update')
   event.preventDefault()
   const data = getFormFields(event.target)
-  const IngredientId = $(event.target).closest('section').data('id')
-  const currentIngredient = {
+  console.log(data)
+  store.updateid = data.id
+  const updatedIngredient = {
     'ingredient': {
       'name': data.name,
       'unit': data.unit
     }
   }
-  console.log(IngredientId)
-  console.log(currentIngredient)
-  api.updateIngredient(currentIngredient)
-    .then(() => onGetIngredients(event))
+  api.updateIngredient(updatedIngredient)
+    .then(ui.updateIngredientsSuccess)
     .catch(ui.failure)
 }
 
@@ -78,8 +79,8 @@ const onDeleteIngredient = (event) => {
 const addHandlers = () => {
   $('#create-ingredient-form').on('submit', onCreateIngredient)
   $('#getIngredientsButton').on('click', onGetIngredients)
-  $('.content').on('click', '#delete', onDeleteIngredient)
-  $('.content').on('click', '#edit', onUpdateIngredient)
+  $('.content').on('click', '.delete', onDeleteIngredient)
+  $('#update-ingredient-form').on('submit', onUpdateIngredient)
   //  $('.content').on('click', 'button', onDeleteBook)
 }
 

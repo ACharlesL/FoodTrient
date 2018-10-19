@@ -1,6 +1,7 @@
 'use strict'
 
 const config = require('../config')
+const store = require('../store.js')
 
 const createIngredient = function (currentData) {
   console.log('in api')
@@ -25,12 +26,12 @@ const deleteIngredient = (ingredientId) => {
   })
 }
 
-const updateIngredient = (ingredientId) => {
+const updateIngredient = (updatedIngredient) => {
+  const updateId = store.updateid
   return $.ajax({
-    url: config.apiUrl + '/ingredients/' + ingredientId,
+    url: config.apiUrl + '/ingredients/' + updateId,
     method: 'PATCH',
-    data: currentData
-
+    data: updatedIngredient
   })
 }
 

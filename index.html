@@ -27,8 +27,9 @@
 
     <div class="ingredient">
       <form id="create-ingredient-form">
+        <h5>  Create ingerdient </h5>
         <div class="container-createIngredient">
-          <label for="IngredientName">Ingredient</label>
+          <label for="IngredientName">Ingredient name</label>
           <input name="name" type="text" id="IngredientName" class="form-control" placeholder="ingredient or item name">
           <label for="unitType">Unit type</label>
           <input name="unit" type="text" id="unitType" class="form-control" placeholder="ingredient or item name">
@@ -43,6 +44,18 @@
           </select>
         </div> -->
 
+        <button type="submit">Submit</button>
+      </form>
+      <form id="update-ingredient-form">
+        <h5>  Update ingerdient </h5>
+        <div class="container-updateIngredient">
+          <label for="updateIngredientID">Ingredient ID</label>
+          <input name="id" type="number" id="updateIngredientID" class="form-control" placeholder="ID">
+          <label for="updateIngredientName">Ingredient name</label>
+          <input name="name" type="text" id="updateIngredientName" class="form-control" placeholder="ingredient or item name">
+          <label for="updateunitType">Unit type</label>
+          <input name="unit" type="text" id="updateunitType" class="form-control" placeholder="ingredient or item name">
+        </div>
         <button type="submit">Submit</button>
       </form>
     </div>
