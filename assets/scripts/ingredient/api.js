@@ -25,6 +25,15 @@ const deleteIngredient = (ingredientId) => {
   })
 }
 
+const updateIngredient = (ingredientId) => {
+  return $.ajax({
+    url: config.apiUrl + '/ingredients/' + ingredientId,
+    method: 'PATCH',
+    data: currentData
+
+  })
+}
+
 // const deleteBook = (bookId) => {
 //   return $.ajax({
 //     url: config.apiUrl + '/books/' + bookId,
@@ -35,5 +44,6 @@ const deleteIngredient = (ingredientId) => {
 module.exports = {
   createIngredient,
   getIngredients,
-  deleteIngredient
+  deleteIngredient,
+  updateIngredient
 }

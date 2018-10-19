@@ -20,6 +20,23 @@ const onCreateIngredient = (event) => {
     .catch(ui.failure)
 }
 
+const onUpdateIngredient = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const IngredientId = $(event.target).closest('section').data('id')
+  const currentIngredient = {
+    'ingredient': {
+      'name': data.name,
+      'unit': data.unit
+    }
+  }
+  console.log(IngredientId)
+  console.log(currentIngredient)
+  api.updateIngredient(currentIngredient)
+    .then(() => onGetIngredients(event))
+    .catch(ui.failure)
+}
+
 const onGetIngredients = (event) => {
   event.preventDefault()
   api.getIngredients()
@@ -61,7 +78,8 @@ const onDeleteIngredient = (event) => {
 const addHandlers = () => {
   $('#create-ingredient-form').on('submit', onCreateIngredient)
   $('#getIngredientsButton').on('click', onGetIngredients)
-  $('.content').on('click', 'button', onDeleteIngredient)
+  $('.content').on('click', '#delete', onDeleteIngredient)
+  $('.content').on('click', '#edit', onUpdateIngredient)
   //  $('.content').on('click', 'button', onDeleteBook)
 }
 
