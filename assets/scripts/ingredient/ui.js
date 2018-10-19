@@ -1,19 +1,25 @@
 'use strict'
 
-// const showBooksTemplate = require('../templates/book-listing.handlebars')
+const showIngredientsTemplate = require('../templates/ingredient-listing.handlebars')
 
 // const ingredientCreateSuccess = (data) => {
 //   console.log(data)
 //   const showBooksHtml = showBooksTemplate({ books: data.books })
 //   $('.content').html(showBooksHtml)
 // }
-const ingredientCreateSuccess = (data) => {
-  $('.display-message').html('content created')
+const ingredientCreateSuccess = function (response) {
+  $('#display-message').html('content created')
+  $('#display-message').css('color', 'green')
+}
+const getIngredientsSuccess = (data) => {
+  console.log(data)
+  const showIngredientsHtml = showIngredientsTemplate({ ingredients: data.ingredients })
+  $('.content').html(showIngredientsHtml)
 }
 
-const clearBooks = () => {
-  $('.content').empty()
-}
+// const clearBooks = () => {
+//   $('.content').empty()
+// }
 
 const failure = (error) => {
   console.error(error)
@@ -21,6 +27,6 @@ const failure = (error) => {
 
 module.exports = {
   ingredientCreateSuccess,
-  clearBooks,
+  getIngredientsSuccess,
   failure
 }

@@ -2,20 +2,38 @@
 
 const config = require('../config')
 
-const createIngredient = function () {
+const createIngredient = function (currentData) {
+  console.log('in api')
   return $.ajax({
-    url: config.apiUrl + '/ingredients'
+    url: config.apiUrl + '/ingredients',
+    method: 'POST',
+    data: currentData
   })
 }
 
-const deleteBook = (bookId) => {
+const getIngredients = function () {
   return $.ajax({
-    url: config.apiUrl + '/books/' + bookId,
+    url: config.apiUrl + '/ingredients',
+    method: 'GET'
+  })
+}
+
+const deleteIngredient = (ingredientId) => {
+  return $.ajax({
+    url: config.apiUrl + '/ingredients/' + ingredientId,
     method: 'DELETE'
   })
 }
 
+// const deleteBook = (bookId) => {
+//   return $.ajax({
+//     url: config.apiUrl + '/books/' + bookId,
+//     method: 'DELETE'
+//   })
+// }
+
 module.exports = {
   createIngredient,
-  deleteBook
+  getIngredients,
+  deleteIngredient
 }

@@ -12,6 +12,6 @@ const ingredientEvents = require('./ingredient/events.js')
 // require('./example')
 
 $(() => {
-  authEvents.addHandlers()
   ingredientEvents.addHandlers()
+  authEvents.addHandlers()
 })

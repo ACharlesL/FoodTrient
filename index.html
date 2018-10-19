@@ -4,6 +4,7 @@
 <head>
   <title>Example</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -15,59 +16,63 @@
 
 <body class="container-fluid">
   <h1>Proj 2 app</h1>
-
+  <nav>
+    <button id="getIngredientsButton" class="btn btn-default">Get ingredients</button>
+    <!--  <button id="clearBooksButton" class="btn btn-default">Clear Books!</button> -->
+  </nav>
   <h5 id="display-message"></h5>
 
-  <div class="ingredient">
-    <form id="create-ingredient">
-    <div class="container-createIngredient">
-      <label for="IngredientName">Ingredient</label>
-      <!-- enter ingredient name -->
-      <input type="text" class="form-control" id="IngredientName" placeholder="ingredient or item name">
+  <main>
+
+
+    <div class="ingredient">
+      <form id="create-ingredient-form">
+        <div class="container-createIngredient">
+          <label for="IngredientName">Ingredient</label>
+          <input name="name" type="text" id="IngredientName" class="form-control" placeholder="ingredient or item name">
+          <label for="unitType">Unit type</label>
+          <input name="unit" type="text" id="unitType" class="form-control" placeholder="ingredient or item name">
+        </div>
+        <!-- <div class="container-unitType">
+          <label for="unitType">Unit type</label>
+          <select class="form-control" id="unitType">
+            <option>tbs</option>
+            <option>tsp</option>
+            <option>lb</option>
+            <option>whole</option>
+          </select>
+        </div> -->
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
-    <div class="container-unitType">
-      <!-- select ingredient unit type and amount -->
-      <label for="unitType">Unit type</label>
-      <select class="form-control" id="unitType">
-        <option>tbs</option>
-        <option>tsp</option>
-        <option>lb</option>
-        <option>whole</option>
-      </select>
+    <div id="content" class="content"></div>
+
+    <div class="container-auth">
+      <form id="sign-in-form">
+        <legend> log in </legend>
+        <input required placeholder="Enter Email" name="credentials[email]" type="email" />
+        <input required placeholder="Enter Password" name="credentials[password]" type="password" />
+        <input type="submit" />
+      </form>
+
+      <form id="Change-password-form" class='hidden'>
+        <legend> Change Password </legend>
+        <input required placeholder="Old Password" name="passwords[old]" type="password" />
+        <input required placeholder="New Password" name="passwords[new]" type="password" />
+        <input type="submit" />
+      </form>
+
+      <form id="sign-up-form">
+        <legend> sign up </legend>
+        <input required placeholder="Enter Email" name="credentials[email]" type="email" />
+        <input required placeholder="Enter Password" name="credentials[password]" type="password" />
+        <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password" />
+        <input type="submit" />
+      </form>
     </div>
-
-      <input type="submit" />
-    </form>
-  </div>
-
-
-
-  <div class="container-auth">
-    <form id="sign-in-form">
-      <legend> log in </legend>
-      <input required placeholder="Enter Email" name="credentials[email]" type="email" />
-      <input required placeholder="Enter Password" name="credentials[password]" type="password" />
-      <input type="submit" />
-    </form>
-
-    <form id="Change-password-form" class='hidden'>
-      <legend> Change Password </legend>
-      <input required placeholder="Old Password" name="passwords[old]" type="password" />
-      <input required placeholder="New Password" name="passwords[new]" type="password" />
-      <input type="submit" />
-    </form>
-
-    <form id="sign-up-form">
-      <legend> sign up </legend>
-      <input required placeholder="Enter Email" name="credentials[email]" type="email" />
-      <input required placeholder="Enter Password" name="credentials[password]" type="password" />
-      <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password" />
-      <input type="submit" />
-    </form>
-  </div>
-  <div id="content" class="content"></div>
-
+  </main>
 </body>
 
 </html>
