@@ -12,6 +12,32 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Proj 2 app</h1>
+
+    <div class="container">
+      <form id="sign-in-form">
+      <legend> log in </legend>
+      <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+      <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+      <input type="submit" />
+      </form>
+
+      <form id="Change-password-form" class='hidden'>
+        <legend> Change Password </legend>
+        <input required placeholder="Old Password" name="passwords[old]" type="password"/>
+        <input required placeholder="New Password" name="passwords[new]" type="password"/>
+        <input type="submit" />
+      </form>
+
+      <form id="sign-up-form">
+      <legend> sign up </legend>
+      <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+      <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+      <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
+      <input type="submit" />
+    </form>
+  </div>
+
+
     </body>
 </html>
