@@ -1,4 +1,4 @@
-# sh curl-scripts/json/sign-in.sh
+#!/bin/bash
 
 curl "https://foodtrient.herokuapp.com/sign-in" \
 --include \

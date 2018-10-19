@@ -22,7 +22,7 @@ const signInSuccess = function (response) {
   // console.log('store.user.token', store.user.token)
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
-  $('#Change-password-form').addClass('hidden')
+  $('#Change-password-form').removeClass('hidden')
   // $('#sign-out-button').addClass('hidden')
   $('#new-game-button').addClass('unhide')
   $('#sign-out-button').addClass('unhide')
