@@ -4,7 +4,7 @@ const config = require('../config')
 const store = require('../store.js')
 
 const createIngredient = function (currentData) {
-  console.log('in api')
+//  console.log('in api')
   return $.ajax({
     url: config.apiUrl + '/ingredients',
     headers: {

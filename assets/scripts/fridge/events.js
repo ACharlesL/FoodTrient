@@ -8,25 +8,25 @@ const store = require('../store.js')
 const onCreateFridge = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('in event')
-  console.log(data)
+//  console.log('in event')
+//  console.log(data)
   const currentFridge = {
     'fridge': {
       'ingredient_id': data.ingredient
     }
   }
-  console.log('current Fridge')
-  console.log(currentFridge)
+//  console.log('current Fridge')
+//  console.log(currentFridge)
   api.createFridge(currentFridge)
     .then(ui.fridgeCreateSuccess)
     .catch(ui.failure)
 }
 
 const onUpdateFridge = (event) => {
-  console.log('in update')
+//  console.log('in update')
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
+//  console.log(data)
   store.updateid = data.id
   const updatedFridge = {
     'fridge': {
@@ -48,13 +48,12 @@ const onGetFridges = (event) => {
 
 const onDeleteFridge = (event) => {
   event.preventDefault()
-  const FridgeId = $(event.target).closest('section').data('id')
-  if (confirm('Are you sure')) {
-    api.deleteFridge(FridgeId)
-      .then(() => onGetFridges(event))
-      .catch(ui.failure)
-  }
+  const FridgeId = event.target
+  api.deleteFridge(FridgeId)
+    .then(ui.fridgeDeleteSuccess)
+    .catch(ui.failure)
 }
+// }
 // const onDeleteIngredient = (event) => {
 //   event.preventDefault()
 //   const bookId = $(event.target).closest('section').date('id')

@@ -13,16 +13,18 @@ const ingredientCreateSuccess = function (response) {
   $('#display-message').css('color', 'green')
 }
 const getFridgesSuccess = (data) => {
-  console.log('in ui before handlebars')
-  console.log(data.fridges[0])
-  console.log(data)
-  console.log(store.user.id)
+//  console.log('in ui before handlebars')
+//  console.log(data.fridges[0])
+//  console.log(data)
+//  console.log(store.user.id)
   const showFridgesHtml = showFridgesTemplate({ fridges: data.fridges })
   $('.content').html(showFridgesHtml)
   // const showFridgesHtml = showFridgesTemplate({ fridges: data.fridges })
   // $('.content').html(showFridgesHtml)
 }
+const fridgeDeleteSuccess= function (response){
 
+}
 const updateIngredientsSuccess = function (response) {
   $('#display-message').html('content updated')
   $('#display-message').css('color', 'green')
@@ -32,7 +34,7 @@ const updateIngredientsSuccess = function (response) {
 // }
 
 const failure = (error) => {
-  console.error(error)
+//  console.error(error)
 }
 
 module.exports = {

@@ -12,7 +12,7 @@ const ingredientCreateSuccess = function (response) {
   $('#display-message').css('color', 'green')
 }
 const getIngredientsSuccess = (data) => {
-  console.log(data)
+//  console.log(data)
   const showIngredientsHtml = showIngredientsTemplate({ ingredients: data.ingredients })
   $('.content').html(showIngredientsHtml)
 }
@@ -26,7 +26,7 @@ const updateIngredientsSuccess = function (response) {
 // }
 
 const failure = (error) => {
-  console.error(error)
+//  console.error(error)
 }
 
 module.exports = {
