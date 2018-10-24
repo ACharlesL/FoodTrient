@@ -23,9 +23,11 @@ const signInSuccess = function (response) {
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
   $('#Change-password-form').removeClass('hidden')
-  // $('#sign-out-button').addClass('hidden')
-  $('#new-game-button').addClass('unhide')
-  $('#sign-out-button').addClass('unhide')
+
+  $('.navigation').removeClass('hidden')
+  $('.fridge').removeClass('hidden')
+  $('.ingredient').removeClass('hidden')
+
   $('#view-games-button').addClass('unhide')
   $('#Change-password-form').addClass('unhide')
   $('#player-logged-on').removeClass('hidden')

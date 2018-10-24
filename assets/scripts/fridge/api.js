@@ -3,10 +3,10 @@
 const config = require('../config')
 const store = require('../store.js')
 
-const createIngredient = function (currentData) {
+const createFridge = function (currentData) {
   console.log('in api')
   return $.ajax({
-    url: config.apiUrl + '/ingredients',
+    url: config.apiUrl + '/fridges',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -15,9 +15,9 @@ const createIngredient = function (currentData) {
   })
 }
 
-const getIngredients = function () {
+const getFridges = function () {
   return $.ajax({
-    url: config.apiUrl + '/ingredients',
+    url: config.apiUrl + '/fridges',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -25,25 +25,19 @@ const getIngredients = function () {
   })
 }
 
-const deleteIngredient = (ingredientId) => {
+const deleteFridge = (fridgeId) => {
   return $.ajax({
-    url: config.apiUrl + '/ingredients/' + ingredientId,
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    },
+    url: config.apiUrl + '/fridges/' + fridgeId,
     method: 'DELETE'
   })
 }
 
-const updateIngredient = (updatedIngredient) => {
+const updateFridge = (updatedFridge) => {
   const updateId = store.updateid
   return $.ajax({
-    url: config.apiUrl + '/ingredients/' + updateId,
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    },
+    url: config.apiUrl + '/fridges/' + updateId,
     method: 'PATCH',
-    data: updatedIngredient
+    data: updatedFridge
   })
 }
 
@@ -55,8 +49,8 @@ const updateIngredient = (updatedIngredient) => {
 // }
 
 module.exports = {
-  createIngredient,
-  getIngredients,
-  deleteIngredient,
-  updateIngredient
+  createFridge,
+  getFridges,
+  updateFridge,
+  deleteFridge
 }

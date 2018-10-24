@@ -4,10 +4,10 @@
   Don't uncomment yet -->
 
   <div>
-    <h1 data-id="{{ingredient.id}}"> <small>Title: {{ingredient.name}}</small></h1>
+    <h1 data-id="{{ingredient.id}}"> <small>{{ingredient.name}}</small></h1>
     <section data-id="{{ingredient.id}}"
-    <p>{{#if ingredient.unit}}
-      {{ingredient.unit}}
+    <p>{{#if ingredient.id}}
+      {{ingredient.id}}
     {{else}}
       No author provided.
     {{/if}}

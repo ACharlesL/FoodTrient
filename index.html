@@ -15,17 +15,28 @@
 </head>
 
 <body class="container-fluid">
-  <h1>Proj 2 app</h1>
-  <nav>
+  <h1>foodtrient</h1>
+  <nav class="navigation hidden">
     <button id="getIngredientsButton" class="btn btn-default">Get ingredients</button>
-    <!--  <button id="clearBooksButton" class="btn btn-default">Clear Books!</button> -->
+    <button id="getFridgesButton" class="btn btn-default">Fridge</button>
+    <button id="sign-out-button" class="btn btn-default"> log out </button>
   </nav>
   <h5 id="display-message"></h5>
 
   <main>
 
+    <div class="fridge hidden">
+      <form id="create-fridgeItem-form">
+        <h5>  insert in fridge </h5>
+        <div class="container-createFridge">
+          <label for="ingredientID">ingredient</label>
+          <input name="ingredient" type="text" id="ingredientID" class="form-control" placeholder="ingredient ID">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
 
-    <div class="ingredient">
+    <div class="ingredient hidden">
       <form id="create-ingredient-form">
         <h5>  Create ingerdient </h5>
         <div class="container-createIngredient">

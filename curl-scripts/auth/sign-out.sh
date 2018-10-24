@@ -1,8 +1,9 @@
 #!/bin/bash
 
-curl "https://foodtrient.herokuapp.com/sign-out" \
---include \
---header "Authorization: Token token=${TOKEN}"
---request DELETE \
+curl "http://localhost:4741/sign-out" \
+  --include \
+  --request DELETE \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Token token=${TOKEN}"
 
 echo

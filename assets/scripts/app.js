@@ -2,6 +2,7 @@
 
 const authEvents = require('./auth/events.js')
 const ingredientEvents = require('./ingredient/events.js')
+const fridgeEvents = require('./fridge/events.js')
 
 // const ingredientEvents = require('./ingredient/events.js')
 
@@ -12,6 +13,7 @@ const ingredientEvents = require('./ingredient/events.js')
 // require('./example')
 
 $(() => {
+  fridgeEvents.addHandlers()
   ingredientEvents.addHandlers()
   authEvents.addHandlers()
 })
