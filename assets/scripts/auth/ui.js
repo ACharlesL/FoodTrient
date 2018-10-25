@@ -27,6 +27,7 @@ const signInSuccess = function (response) {
   $('.navigation').removeClass('hidden')
   $('.fridge').removeClass('hidden')
   $('.ingredient').removeClass('hidden')
+  $('.delete-fridge-form').removeClass('hidden')
 
   $('#view-games-button').addClass('unhide')
   $('#Change-password-form').addClass('unhide')

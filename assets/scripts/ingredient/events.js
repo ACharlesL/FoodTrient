@@ -47,7 +47,7 @@ const onGetIngredients = (event) => {
 
 const onDeleteIngredient = (event) => {
   event.preventDefault()
-//  console.log('in delete ingrid')
+  // console.log('in delete ingrid')
   const IngredientId = $(event.target).closest('section').data('id')
   api.deleteIngredient(IngredientId)
     .then(() => onGetIngredients(event))

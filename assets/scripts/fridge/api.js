@@ -28,6 +28,9 @@ const getFridges = function () {
 const deleteFridge = (fridgeId) => {
   return $.ajax({
     url: config.apiUrl + '/fridges/' + fridgeId,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
     method: 'DELETE'
   })
 }

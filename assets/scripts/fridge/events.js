@@ -8,15 +8,15 @@ const store = require('../store.js')
 const onCreateFridge = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-//  console.log('in event')
-//  console.log(data)
+  //  console.log('in event')
+  //  console.log(data)
   const currentFridge = {
     'fridge': {
       'ingredient_id': data.ingredient
     }
   }
-//  console.log('current Fridge')
-//  console.log(currentFridge)
+  //  console.log('current Fridge')
+  //  console.log(currentFridge)
   api.createFridge(currentFridge)
     .then(ui.fridgeCreateSuccess)
     .catch(ui.failure)
@@ -26,7 +26,7 @@ const onUpdateFridge = (event) => {
 //  console.log('in update')
   event.preventDefault()
   const data = getFormFields(event.target)
-//  console.log(data)
+  //  console.log(data)
   store.updateid = data.id
   const updatedFridge = {
     'fridge': {
@@ -46,11 +46,22 @@ const onGetFridges = (event) => {
     .catch(ui.failure)
 }
 
+// const onDeleteFridge = (event) => {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   console.log(data.fridge)
+//   const fridgeId = data.fridge
+//   api.deleteFridge(fridgeId)
+//     .then(ui.fridgeDeleteSuccess)
+//     .catch(ui.failure)
+// }
+
 const onDeleteFridge = (event) => {
   event.preventDefault()
-  const FridgeId = event.target
+  // console.log('in delete ingrid')
+  const FridgeId = $(event.target).closest('section').data('id')
   api.deleteFridge(FridgeId)
-    .then(ui.fridgeDeleteSuccess)
+    .then(() => onGetFridges(event))
     .catch(ui.failure)
 }
 // }
@@ -79,8 +90,10 @@ const onDeleteFridge = (event) => {
 const addHandlers = () => {
   $('#create-fridgeItem-form').on('submit', onCreateFridge)
   $('#getFridgesButton').on('click', onGetFridges)
-  $('.content').on('click', '.delete', onDeleteFridge)
+  $('content').on('click', 'button', onDeleteFridge)
+  // $('.content').on('click', '.delete', onDeleteFridge)
   $('#update-ingredient-form').on('submit', onUpdateFridge)
+
   //  $('.content').on('click', 'button', onDeleteBook)
 }
 

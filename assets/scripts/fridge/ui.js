@@ -22,10 +22,12 @@ const getFridgesSuccess = (data) => {
   // const showFridgesHtml = showFridgesTemplate({ fridges: data.fridges })
   // $('.content').html(showFridgesHtml)
 }
-const fridgeDeleteSuccess= function (response){
-
+const fridgeDeleteSuccess = function (response) {
+  $('#display-message').html('content deleted')
+  $('#display-message').css('color', 'red')
 }
-const updateIngredientsSuccess = function (response) {
+
+const updateFridgeSuccess = function (response) {
   $('#display-message').html('content updated')
   $('#display-message').css('color', 'green')
 }
@@ -41,5 +43,6 @@ module.exports = {
   ingredientCreateSuccess,
   getFridgesSuccess,
   failure,
-  updateIngredientsSuccess
+  updateIngredientsSuccess,
+  fridgeDeleteSuccess
 }
