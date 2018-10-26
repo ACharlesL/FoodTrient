@@ -1,7 +1,6 @@
 'use strict'
 
 const showFridgesTemplate = require('../templates/fridge-listing.handlebars')
-const store = require('../store.js')
 
 // const ingredientCreateSuccess = (data) => {
 //   console.log(data)
@@ -36,13 +35,13 @@ const updateFridgeSuccess = function (response) {
 // }
 
 const failure = (error) => {
-//  console.error(error)
+  console.error(error)
 }
 
 module.exports = {
   ingredientCreateSuccess,
   getFridgesSuccess,
   failure,
-  updateIngredientsSuccess,
+  updateFridgeSuccess,
   fridgeDeleteSuccess
 }
