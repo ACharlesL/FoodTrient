@@ -1,4 +1,5 @@
-atom## Introduction
+atom
+## Introduction
 
 A brief Introduction and summary of the App.
 Foodtrient is a single page application that allows a user to add an ingredient item to the applications database and also allow to add a particular ingredient(item) to a container(fridge) which is user specific.
@@ -42,11 +43,13 @@ My first order of businesss is to create an ingredient curl script to crud the i
 my first commit was made to the API repository in order to save all work done.
 A second round on CRUD-ing my Ingredient resource was successfull with index, show, update, destroy, create working without authentication.
 My next approach is to Scaffold a fridge resource, which was successfull. Checked all files that rails generated to verify there are no errors. Start working on creating fridge curls scripts, Made commits for fridge migrate to save my progress and have a database setup. Had success with Create, update, destroy, index and show curl for fridge resource. I started work on front end client application before working on back end deploy serve side to heroku. Afterwhich I worked on login. At this point i decided to make an attempt to access heroku api for client side with success.
+
 On the second day I decided to start work on front end and html for client-side.
 Worked on event handler and researched handle bars(templating engine) as some off my resources will use handle bars for UI.
 After some UI work for auth client side I realize I need to test change password in server side before proceeding as the user api was already created for my application by other developers. So headed back to server side to CRUD user resource. Checked to see if curl script for auth works with local serve side .(success)
 The result was good, Auth works and move on to work on creating resources, seem to have worked but need to test in Postgres server side
 Time to work on show ingredient that were created.
+
 Finally able to create and read a resource from the front end. Working on updating, deleting  a resource Success with deleting resource.
 Worked on updating a resource.
 I realize I need to build a modal or use a form, Implemented a form first and will consider a modal for version 2.
