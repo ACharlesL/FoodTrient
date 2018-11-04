@@ -5,6 +5,11 @@ A brief Introduction and summary of the App.
 Foodtrient is a single page application that allows a user to add an ingredient item to the applications database and also allow to add a particular ingredient(item) to a container(fridge) which is user specific.
 In the future the application should provide the user nutrients analytics and present the user with options of a recipe based on ingredients provided. And try to provide some nutritional guide.
 
+## Links
+  [Client](https://acharlesl.github.io/FoodTrient/)
+  [API](https://foodtrient.herokuapp.com/)
+  [API Repo](https://github.com/ACharlesL/FoodTrient-API)
+
 ## Requirements
 
 This module requires the following:
@@ -18,16 +23,19 @@ This module requires the following:
 
 ## Technologies used
 
-* html
-* css
-* javascript
-* jquery
-* ajax
-* sass
+* HTML
+* CSS
+* Javascript
+* JQuery
+* AJAX
+* Sass
 * Ruby
 * Ruby on Rails
 * PostgreSQL
 * HandelBars
+* Grunt
+* Node
+* Git
 
 ## Plan and Development process
 
