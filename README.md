@@ -1,4 +1,4 @@
-atom
+
 ## Introduction
 
 A brief Introduction and summary of the App.
