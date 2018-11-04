@@ -6,8 +6,11 @@ Foodtrient is a single page application that allows a user to add an ingredient 
 In the future the application should provide the user nutrients analytics and present the user with options of a recipe based on ingredients provided. And try to provide some nutritional guide.
 
 ## Links
-  [Client](https://acharlesl.github.io/FoodTrient/)
+
+  - [Client](https://acharlesl.github.io/FoodTrient/)
+
   [API](https://foodtrient.herokuapp.com/)
+
   [API Repo](https://github.com/ACharlesL/FoodTrient-API)
 
 ## Requirements
