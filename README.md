@@ -1,9 +1,7 @@
-## Introduction
+atom## Introduction
 
 A brief Introduction and summary of the App.
-This is a single page application. A single player Tic Tac Toe game. current status of the application allows a player to play as both player'X' and player'O'. Plans for the future is to add an AI opponent and multiplayer opponent.
-
-foodtrient is a single page application that allows a user to add an ingredient item to the applications database and also allow to add a particular ingredient(item) to a container(fridge) which is user specific.
+Foodtrient is a single page application that allows a user to add an ingredient item to the applications database and also allow to add a particular ingredient(item) to a container(fridge) which is user specific.
 In the future the application should provide the user nutrients analytics and present the user with options of a recipe based on ingredients provided. And try to provide some nutritional guide.
 
 ## Requirements
@@ -28,6 +26,7 @@ This module requires the following:
 * Ruby
 * Ruby on Rails
 * PostgreSQL
+* HandelBars
 
 ## Plan and Development process
 
@@ -43,21 +42,19 @@ My first order of businesss is to create an ingredient curl script to crud the i
 my first commit was made to the API repository in order to save all work done.
 A second round on CRUD-ing my Ingredient resource was successfull with index, show, update, destroy, create working without authentication.
 My next approach is to Scaffold a fridge resource, which was successfull. Checked all files that rails generated to verify there are no errors. Start working on creating fridge curls scripts, Made commits for fridge migrate to save my progress and have a database setup. Had success with Create, update, destroy, index and show curl for fridge resource. I started work on front end client application before working on back end deploy serve side to heroku. Afterwhich I worked on login. At this point i decided to make an attempt to access heroku api for client side with success.
-On the second day I decided to start working on front end to html of client
+On the second day I decided to start work on front end and html for client-side.
 Worked on event handler and researched handle bars(templating engine) as some off my resources will use handle bars for UI.
 After some UI work for auth client side I realize I need to test change password in server side before proceeding as the user api was already created for my application by other developers. So headed back to server side to CRUD user resource. Checked to see if curl script for auth works with local serve side .(success)
-Auth works and worked on creating resources, seem to have worked but need to test in Postgres server side
+The result was good, Auth works and move on to work on creating resources, seem to have worked but need to test in Postgres server side
 Time to work on show ingredient that were created.
-Finally able to create and read a resource from the front end. Now working on updating, deleting  a resource Success with deleting resource.
-Working on updating a resource.
-Need to build a modal or use a form.
-Implementing a form first before modal
-Success inplementing form updating of resource
-checking fridge curl in server side to implement authentication and relationship
-Success with fridge create, update, index, show, destroy. CRUD complete
-Able to create a relation between ingredient and fridge and user
-Trying to verify CRUD resources in the frontend app including UI
-Create relation and isolate what users can access
+Finally able to create and read a resource from the front end. Working on updating, deleting  a resource Success with deleting resource.
+Worked on updating a resource.
+I realize I need to build a modal or use a form, Implemented a form first and will consider a modal for version 2.
+Success implementing form for updating a resource, checking fridge curl in server side to implement authentication and relationship
+Success with fridge create, update, index, show, destroy. CRUD complete.
+Able to create a relation between ingredient and fridge and user.
+Trying to verify CRUD resources in the client-side app including UI
+Create relation and isolate what users can access.
 
 
 ## Unsolved Problems
@@ -67,8 +64,8 @@ Create relation and isolate what users can access
   - A responsive user interface and better UI/UX.
 
 ## Wireframe
-[Imgur](https://i.imgur.com/W4nCRCo.jpg)
-[Imgur](https://i.imgur.com/CqP0sej.jpg)
+  - [Imgur](https://i.imgur.com/W4nCRCo.jpg)
+  - [Imgur](https://i.imgur.com/CqP0sej.jpg)
 
 ## User Stories.
 * As a non credential user I should be able to sign up with and email address and password.
