@@ -7,11 +7,11 @@ In the future the application should provide the user nutrients analytics and pr
 
 ## Links
 
-  [Client](https://acharlesl.github.io/FoodTrient/)
+  - [Client](https://acharlesl.github.io/FoodTrient/)
 
-  [API](https://foodtrient.herokuapp.com/)
+  - [API](https://foodtrient.herokuapp.com/)
 
-  [API Repo](https://github.com/ACharlesL/FoodTrient-API)
+  - [API Repo](https://github.com/ACharlesL/FoodTrient-API)
 
 ## Requirements
 
