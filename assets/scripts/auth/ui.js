@@ -45,6 +45,11 @@ const signInFailure = function () {
   $('#sign-in-form').trigger('reset')
 }
 const signOutSuccess = function () {
+  $('.fridge').addClass('hidden')
+  $('.ingredient').addClass('hidden')
+  $('.navigation').addClass('hidden')
+  $('.content').addClass('hidden')
+
   $('#display-message').html('Sign Out successful')
   $('#display-message').css('color', 'green')
   $('#sign-up-form').removeClass('hidden')

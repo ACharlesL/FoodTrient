@@ -26,11 +26,11 @@
   <main>
 
   <div class="container">
-    <div class="fridge">
+    <div class="fridge hidden">
       <div class="col col-lg-2">
       </div>
       <form id="create-fridgeItem-form">
-        <h5>  insert in fridge </h5>
+        <h5>  add to fridge </h5>
         <div class="container-createFridge">
           <label for="ingredientID">ingredient</label>
           <input name="ingredient" type="text" id="ingredientID" class="form-control" placeholder="ingredient ID">
@@ -38,7 +38,7 @@
         </div>
       </form>
       <form id="delete-fridgeItem-form">
-        <h5> delete fridge item </h5>
+        <h5> remove from fridge </h5>
         <div class="container-deletefridge">
           <label for="deleteFridgeID">Ingredient ID</label>
           <input name="fridge" type="text" id="fridgeID" class="form-control" placeholder="fridge ID">
@@ -50,7 +50,10 @@
     </div>
   </div>
 
+<div class="container">
     <div class="ingredient hidden">
+      <div class="col col-lg-2">
+      </div>
       <form id="create-ingredient-form">
         <h5>  Create ingerdient </h5>
         <div class="container-createIngredient">
@@ -83,10 +86,15 @@
         </div>
         <button type="submit">Submit</button>
       </form>
+      <div class="col col-lg-2">
+      </div>
     </div>
+  </div>
 
-
+  <div class="container">
     <div class="container-auth">
+      <div class="col col-lg-2">
+      </div>
       <form id="sign-in-form">
         <legend> log in </legend>
         <input required placeholder="Enter Email" name="credentials[email]" type="email" />
@@ -108,7 +116,11 @@
         <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password" />
         <input type="submit" />
       </form>
+      <div class="col col-lg-2">
+      </div>
     </div>
+  </div>
+
   </main>
 </body>
 
