@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="container">
+  <h1>foodtrient</h1>
+  <nav class="navigation hidden">
+    <button id="getIngredientsButton" class="btn btn-default">Get ingredients</button>
+    <button id="getFridgesButton" class="btn btn-default">Fridge</button>
+    <button id="sign-out-button" class="btn btn-default"> log out </button>
+  </nav>
+  <h5 id="display-message"></h5>
+  <div id="content" class="content"></div>
+  <main>
+
+
+    <!-- modal experiment start-->
+    <div class="container">
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg signInModal" data-toggle="modal" data-target="#signInModal">sign in</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="signInModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">sign in</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form id="sign-in-form">
+                <input required placeholder="Enter Email" name="credentials[email]" type="email" />
+                <input required placeholder="Enter Password" name="credentials[password]" type="password" />
+                <input type="submit"/>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+<!--modal experiment end -->
+
+  <div class="container">
+    <div class="fridge hidden">
+      <div class="col col-lg-2">
+      </div>
+      <form id="create-fridgeItem-form">
+        <h5>  add to fridge </h5>
+        <div class="container-createFridge">
+          <label for="ingredientID">ingredient</label>
+          <input name="ingredient" type="text" id="ingredientID" class="form-control" placeholder="ingredient ID">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <form id="delete-fridgeItem-form">
+        <h5> remove from fridge </h5>
+        <div class="container-deletefridge">
+          <label for="deleteFridgeID">Ingredient ID</label>
+          <input name="fridge" type="text" id="fridgeID" class="form-control" placeholder="fridge ID">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="col col-lg-2">
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="ingredient hidden">
+      <div class="col col-lg-2">
+      </div>
+      <form id="create-ingredient-form">
+        <h5>  Create ingerdient </h5>
+        <div class="container-createIngredient">
+          <label for="IngredientName">Ingredient name</label>
+          <input name="name" type="text" id="IngredientName" class="form-control" placeholder="ingredient or item name">
+          <label for="unitType">Unit type</label>
+          <input name="unit" type="text" id="unitType" class="form-control" placeholder="ingredient or item name">
+        </div>
+        <!-- <div class="container-unitType">
+          <label for="unitType">Unit type</label>
+          <select class="form-control" id="unitType">
+            <option>tbs</option>
+            <option>tsp</option>
+            <option>lb</option>
+            <option>whole</option>
+          </select>
+        </div> -->
+
+        <button type="submit">Submit</button>
+      </form>
+      <form id="update-ingredient-form">
+        <h5>  Update ingerdient </h5>
+        <div class="container-updateIngredient">
+          <label for="updateIngredientID">Ingredient ID</label>
+          <input name="id" type="number" id="updateIngredientID" class="form-control" placeholder="ID">
+          <label for="updateIngredientName">Ingredient name</label>
+          <input name="name" type="text" id="updateIngredientName" class="form-control" placeholder="ingredient or item name">
+          <label for="updateunitType">Unit type</label>
+          <input name="unit" type="text" id="updateunitType" class="form-control" placeholder="ingredient or item name">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="col col-lg-2">
+      </div>
+    </div>
+</div>
+
+  <div class="container">
+    <div class="container-auth">
+      <div class="col col-lg-2">
+      </div>
+      <!-- <form id="sign-in-form">
+        <legend> log in </legend>
+        <input required placeholder="Enter Email" name="credentials[email]" type="email" />
+        <input required placeholder="Enter Password" name="credentials[password]" type="password" />
+        <input type="submit" />
+      </form> -->
+
+      <form id="Change-password-form" class='hidden'>
+        <legend> Change Password </legend>
+        <input required placeholder="Old Password" name="passwords[old]" type="password" />
+        <input required placeholder="New Password" name="passwords[new]" type="password" />
+        <input type="submit" />
+      </form>
+
+      <form id="sign-up-form">
+        <legend> sign up </legend>
+        <input required placeholder="Enter Email" name="credentials[email]" type="email" />
+        <input required placeholder="Enter Password" name="credentials[password]" type="password" />
+        <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password" />
+        <input type="submit" />
+      </form>
+      <div class="col col-lg-2">
+      </div>
+    </div>
+  </div>
+  </main>
+</div>
+
+</body>
+
+</html>
