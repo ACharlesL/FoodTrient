@@ -14,7 +14,8 @@
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 
-<body class="container-fluid">
+<body>
+<div class="container">
   <h1>foodtrient</h1>
   <nav class="navigation hidden">
     <button id="getIngredientsButton" class="btn btn-default">Get ingredients</button>
@@ -24,6 +25,40 @@
   <h5 id="display-message"></h5>
   <div id="content" class="content"></div>
   <main>
+
+
+    <!-- modal experiment start-->
+    <div class="container">
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg signInModal" data-toggle="modal" data-target="#signInModal">sign in</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="signInModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">sign in</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form id="sign-in-form">
+                <input required placeholder="Enter Email" name="credentials[email]" type="email" />
+                <input required placeholder="Enter Password" name="credentials[password]" type="password" />
+                <input type="submit"/>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+<!--modal experiment end -->
 
   <div class="container">
     <div class="fridge hidden">
@@ -89,18 +124,18 @@
       <div class="col col-lg-2">
       </div>
     </div>
-  </div>
+</div>
 
   <div class="container">
     <div class="container-auth">
       <div class="col col-lg-2">
       </div>
-      <form id="sign-in-form">
+      <!-- <form id="sign-in-form">
         <legend> log in </legend>
         <input required placeholder="Enter Email" name="credentials[email]" type="email" />
         <input required placeholder="Enter Password" name="credentials[password]" type="password" />
         <input type="submit" />
-      </form>
+      </form> -->
 
       <form id="Change-password-form" class='hidden'>
         <legend> Change Password </legend>
@@ -120,8 +155,9 @@
       </div>
     </div>
   </div>
-
   </main>
+</div>
+
 </body>
 
 </html>

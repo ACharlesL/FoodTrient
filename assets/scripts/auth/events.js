@@ -41,6 +41,12 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+$(document).ready(function () {
+  $('#myBtn').click(function () {
+    $('#myModal').modal()
+  })
+})
+
 const addHandlers = () => {
   $('#sign-up-form').on('submit', onSignUp)
   $('#sign-in-form').on('submit', onSignIn)

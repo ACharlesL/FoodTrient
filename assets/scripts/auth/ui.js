@@ -22,6 +22,7 @@ const signInSuccess = function (response) {
   // console.log('store.user.token', store.user.token)
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
+  $('#signInModal').addClass('hidden')
   $('#Change-password-form').removeClass('hidden')
 
   $('.navigation').removeClass('hidden')
